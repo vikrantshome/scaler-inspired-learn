@@ -4,9 +4,9 @@ import { useRef } from "react";
 
 const stats = [
   { value: "700+", label: "Schools Engaged" },
-  { value: "100+", label: "Cities Covered" },
-  { value: "30-40%", label: "More Actionable Insights" },
-  { value: "15", label: "Minutes Assessment" },
+  { value: "17+", label: "Cities in India" },
+  { value: "30-40%", label: "Better Insights" },
+  { value: "15", label: "Min Assessment" },
 ];
 
 const StatsSection = () => {
@@ -42,11 +42,11 @@ const StatsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="bg-background rounded-2xl p-8 text-center border border-border shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-gradient mb-2">
+              <div className="bg-background rounded-2xl p-6 md:p-8 text-center border border-border shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl md:text-5xl font-heading font-bold text-gradient mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">
+                <div className="text-xs md:text-sm text-muted-foreground font-medium whitespace-nowrap">
                   {stat.label}
                 </div>
               </div>
