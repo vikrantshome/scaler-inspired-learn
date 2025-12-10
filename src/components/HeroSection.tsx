@@ -81,13 +81,8 @@ const HeroSection = () => {
           >
             <Button variant="hero" size="xl" asChild className="group">
               <a href="https://www.naviksha.co.in/auth" target="_blank" rel="noopener noreferrer">
-                Start Now • Get Report
+                Start Test
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="#how-it-works">
-                Learn More
               </a>
             </Button>
           </motion.div>
