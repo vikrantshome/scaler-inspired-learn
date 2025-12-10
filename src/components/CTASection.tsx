@@ -31,7 +31,7 @@ const CTASection = () => {
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
-                Upcoming Cycle: 26 Nov - 20 Dec
+                Live Exam Dates: 26 Nov - 20 Dec
               </div>
 
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">

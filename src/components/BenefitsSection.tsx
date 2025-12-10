@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { FileCheck, Award, BookOpen, Building2, Users, ClipboardList } from "lucide-react";
+import { FileCheck, Award, BookOpen } from "lucide-react";
 
 const studentBenefits = [
   {
@@ -12,25 +12,13 @@ const studentBenefits = [
   {
     icon: Award,
     title: "Participation Certificate",
-    description: "IIT Bombay MoodI certified participation certificate for all participants.",
+    description: "IIT co-endorsed participation certificate for all participants.",
   },
   {
     icon: BookOpen,
     title: "Career Booklet",
     description: "Comprehensive booklet on New Age Careers to guide future decisions.",
   },
-];
-
-const schoolProvides = [
-  { icon: Building2, text: "Class Slot" },
-  { icon: Users, text: "Staff Access" },
-  { icon: ClipboardList, text: "Teacher POC" },
-];
-
-const navikshaProvides = [
-  { icon: Users, text: "Facilitation" },
-  { icon: FileCheck, text: "AI Reports" },
-  { icon: ClipboardList, text: "Insights Summary" },
 ];
 
 const BenefitsSection = () => {
@@ -79,50 +67,6 @@ const BenefitsSection = () => {
           ))}
         </div>
 
-        {/* School & Naviksha Provides */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-background rounded-2xl p-8 border border-border shadow-card"
-          >
-            <h3 className="font-heading text-xl font-bold text-foreground mb-6">
-              School Provides
-            </h3>
-            <div className="space-y-4">
-              {schoolProvides.map((item, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-foreground" />
-                  </div>
-                  <span className="text-foreground font-medium">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-gradient-primary rounded-2xl p-8 shadow-elevated"
-          >
-            <h3 className="font-heading text-xl font-bold text-primary-foreground mb-6">
-              Naviksha Provides
-            </h3>
-            <div className="space-y-4">
-              {navikshaProvides.map((item, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <span className="text-primary-foreground font-medium">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
       </div>
     </section>
   );
