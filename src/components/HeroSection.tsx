@@ -1,18 +1,35 @@
+/**
+ * HeroSection.tsx - Main Hero Banner
+ * 
+ * The first section visitors see. Contains the primary value proposition,
+ * key features, and the main call-to-action button.
+ * 
+ * Layout:
+ * - Full viewport height section
+ * - Centered content with max-width constraint
+ * - Decorative background blurs for depth
+ * - Staggered animations for visual interest
+ */
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Clock, Target, Zap, Users, ArrowRight, CheckCircle2 } from "lucide-react";
 
-const features = [
-  { icon: Clock, text: "15 minutes" },
-  { icon: Target, text: "Top 3 careers" },
-  { icon: Zap, text: "AI-powered insights" },
-  { icon: Users, text: "700+ schools" },
+// External link for all CTAs
+const CTA_LINK = "https://www.naviksha.co.in/auth";
+
+// Feature badges data - key selling points displayed as pills
+const FEATURES = [
+  { icon: Clock, text: "15 minutes" },      // Quick assessment time
+  { icon: Target, text: "Top 3 careers" },  // Clear outcome
+  { icon: Zap, text: "AI-powered insights" }, // Technology differentiator
+  { icon: Users, text: "700+ schools" },    // Social proof
 ];
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
-      {/* Background decoration */}
+      {/* Background Decorations - Blurred circles for depth effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
@@ -21,18 +38,20 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
+          
+          {/* Initiative Badge - Pulsing indicator with label */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary font-medium mb-8"
           >
+            {/* Animated pulse dot */}
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse-soft" />
             National Career Counselling Initiative
           </motion.div>
 
-          {/* Main heading */}
+          {/* Main Headline - Primary value proposition */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,10 +59,11 @@ const HeroSection = () => {
             className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
           >
             Discover the career path that{" "}
+            {/* Gradient text for emphasis */}
             <span className="text-gradient">fits your strengths</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Subheadline - Supporting details */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,25 +74,27 @@ const HeroSection = () => {
             Get personalized career insights in just 15 minutes.
           </motion.p>
 
-          {/* Feature badges */}
+          {/* Feature Badges - Key selling points as visual pills */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-3 mb-10"
           >
-            {features.map((feature, index) => (
+            {FEATURES.map((feature, index) => (
               <div
                 key={index}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-border shadow-card"
               >
                 <feature.icon className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                <span className="text-sm font-medium text-foreground">
+                  {feature.text}
+                </span>
               </div>
             ))}
           </motion.div>
 
-          {/* CTA buttons */}
+          {/* Primary CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,14 +102,15 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button variant="hero" size="xl" asChild className="group">
-              <a href="https://www.naviksha.co.in/auth" target="_blank" rel="noopener noreferrer">
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
                 Start Test
+                {/* Arrow animates on hover */}
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </motion.div>
 
-          {/* Trust indicator */}
+          {/* Trust Indicator - Reduces friction */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

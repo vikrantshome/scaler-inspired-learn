@@ -1,9 +1,21 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+/**
+ * BenefitsSection.tsx - What Participants Receive
+ * 
+ * Displays the three main deliverables for assessment participants.
+ * Each benefit has an icon, title, and description.
+ * 
+ * Benefits:
+ * 1. Career Compass Report - Detailed analysis
+ * 2. Participation Certificate - IIT co-endorsed
+ * 3. Career Booklet - New Age Careers guide
+ */
+
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FileCheck, Award, BookOpen } from "lucide-react";
 
-const studentBenefits = [
+// Benefits data - what students receive after the assessment
+const BENEFITS = [
   {
     icon: FileCheck,
     title: "Career Compass Report",
@@ -28,12 +40,14 @@ const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-24 bg-card relative overflow-hidden">
       <div className="container mx-auto px-4" ref={ref}>
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          {/* Section badge with accent color */}
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             What You Get
           </span>
@@ -42,9 +56,9 @@ const BenefitsSection = () => {
           </h2>
         </motion.div>
 
-        {/* Student Benefits */}
+        {/* Benefits Grid - 3 columns on desktop */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {studentBenefits.map((benefit, index) => (
+          {BENEFITS.map((benefit, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -52,13 +66,19 @@ const BenefitsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
+              {/* Benefit Card */}
               <div className="bg-background rounded-2xl p-8 border border-border shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 h-full">
+                {/* Icon with gradient background - scales on hover */}
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <benefit.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
+                
+                {/* Benefit title */}
                 <h3 className="font-heading text-xl font-bold text-foreground mb-3">
                   {benefit.title}
                 </h3>
+                
+                {/* Benefit description */}
                 <p className="text-muted-foreground">
                   {benefit.description}
                 </p>
@@ -66,7 +86,6 @@ const BenefitsSection = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
