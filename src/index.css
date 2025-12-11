@@ -1,57 +1,118 @@
+/**
+ * index.css - Global Styles & Design System
+ * 
+ * This file defines the design tokens (CSS variables) used throughout
+ * the application. All colors, shadows, and gradients are defined here
+ * and referenced in components using Tailwind classes.
+ * 
+ * Structure:
+ * 1. Font imports
+ * 2. Tailwind directives
+ * 3. CSS variables (light & dark themes)
+ * 4. Base styles
+ * 5. Utility classes
+ */
+
+/* ============================================
+   FONT IMPORTS
+   DM Sans: Body text - clean, readable
+   Plus Jakarta Sans: Headings - modern, bold
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+/* ============================================
+   TAILWIND DIRECTIVES
+   ============================================ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   DESIGN TOKENS - LIGHT THEME (Default)
+   All colors use HSL format for flexibility
+   ============================================ */
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* Background colors */
+    --background: 210 40% 98%;        /* Main page background - light blue-gray */
+    --foreground: 222 47% 11%;        /* Primary text color - dark blue */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    /* Card/Surface colors */
+    --card: 0 0% 100%;                /* Card background - pure white */
+    --card-foreground: 222 47% 11%;   /* Card text - matches foreground */
 
+    /* Popover colors (dropdowns, tooltips) */
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand color - Blue */
+    --primary: 221 83% 53%;           /* Main brand blue */
+    --primary-foreground: 210 40% 98%; /* White text on primary */
 
+    /* Secondary color - Light blue-gray */
     --secondary: 214 32% 91%;
     --secondary-foreground: 222 47% 11%;
 
+    /* Muted colors - For subtle UI elements */
     --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted-foreground: 215 16% 47%;  /* Gray for secondary text */
 
+    /* Accent color - Orange (for highlights) */
     --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
 
+    /* Destructive/Error color - Red */
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
+    /* Border & Input colors */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --ring: 221 83% 53%;              /* Focus ring - matches primary */
 
-    --radius: 0.75rem;
+    /* Border radius */
+    --radius: 0.75rem;                /* 12px - rounded corners */
 
-    /* Custom tokens */
+    /* ========================================
+       CUSTOM GRADIENT TOKENS
+       ======================================== */
+    
+    /* Primary gradient - Blue to purple */
     --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(244 76% 57%) 100%);
+    
+    /* Hero section background - Subtle vertical gradient */
     --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(214 44% 96%) 50%, hsl(221 83% 97%) 100%);
+    
+    /* Card gradient - Very subtle */
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(214 44% 99%) 100%);
+    
+    /* Accent gradient - Orange tones */
     --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(17 92% 58%) 100%);
     
+    /* ========================================
+       SHADOW TOKENS
+       ======================================== */
+    
+    /* Soft shadow - Subtle elevation */
     --shadow-soft: 0 4px 20px -4px hsl(221 83% 53% / 0.12);
+    
+    /* Card shadow - Default card elevation */
     --shadow-card: 0 8px 32px -8px hsl(221 83% 20% / 0.08);
+    
+    /* Elevated shadow - Hover/active states */
     --shadow-elevated: 0 20px 60px -15px hsl(221 83% 20% / 0.15);
     
+    /* Text gradient - For gradient text effect */
     --text-gradient: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(244 76% 57%) 100%);
   }
 
+  /* ==========================================
+     DARK THEME
+     Applied when .dark class is on root element
+     ========================================== */
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 222 47% 6%;         /* Dark background */
+    --foreground: 210 40% 98%;        /* Light text */
 
     --card: 222 47% 8%;
     --card-foreground: 210 40% 98%;
@@ -59,7 +120,7 @@
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 221 83% 60%;
+    --primary: 221 83% 60%;           /* Lighter blue for dark mode */
     --primary-foreground: 222 47% 11%;
 
     --secondary: 217 33% 17%;
@@ -80,22 +141,34 @@
   }
 }
 
+/* ============================================
+   BASE STYLES
+   Applied to all elements by default
+   ============================================ */
 @layer base {
+  /* Apply border color to all elements */
   * {
     @apply border-border;
   }
 
+  /* Body styles */
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', system-ui, sans-serif;
   }
 
+  /* Heading font family */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
 
+/* ============================================
+   UTILITY CLASSES
+   Custom utilities for gradients, shadows, animations
+   ============================================ */
 @layer utilities {
+  /* Gradient text - Makes text use gradient colors */
   .text-gradient {
     background: var(--text-gradient);
     -webkit-background-clip: text;
@@ -103,6 +176,7 @@
     background-clip: text;
   }
 
+  /* Background gradients */
   .bg-gradient-primary {
     background: var(--gradient-primary);
   }
@@ -115,6 +189,7 @@
     background: var(--gradient-accent);
   }
 
+  /* Shadow utilities */
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -127,6 +202,11 @@
     box-shadow: var(--shadow-elevated);
   }
 
+  /* ========================================
+     ANIMATIONS
+     ======================================== */
+  
+  /* Float animation - Gentle up/down movement */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -136,6 +216,7 @@
     50% { transform: translateY(-10px); }
   }
 
+  /* Soft pulse - Subtle opacity change */
   .animate-pulse-soft {
     animation: pulse-soft 3s ease-in-out infinite;
   }
