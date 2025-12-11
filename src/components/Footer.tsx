@@ -14,7 +14,7 @@
 import { Sparkles, Mail, Phone } from "lucide-react";
 
 // External link for CTA
-const CTA_LINK = "https://www.naviksha.co.in/auth";
+const CTA_LINK = "https://app.naviksha.co.in/auth";
 
 const Footer = () => {
   return (

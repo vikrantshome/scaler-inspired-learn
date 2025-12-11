@@ -222,7 +222,7 @@ src/
 
 ## External Links
 
-All CTAs link to: `https://www.naviksha.co.in/auth`
+All CTAs link to: `https://app.naviksha.co.in/auth`
 
 ### Contact Information
 - **Email:** ainaviksha@gmail.com

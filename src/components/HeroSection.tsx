@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, Target, Zap, Users, ArrowRight, CheckCircle2 } from "lucide-react";
 
 // External link for all CTAs
-const CTA_LINK = "https://www.naviksha.co.in/auth";
+const CTA_LINK = "https://app.naviksha.co.in/auth";
 
 // Feature badges data - key selling points displayed as pills
 const FEATURES = [

@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
 // External link for all CTAs - the main conversion destination
-const CTA_LINK = "https://www.naviksha.co.in/auth";
+const CTA_LINK = "https://app.naviksha.co.in/auth";
 
 const Header = () => {
   return (
