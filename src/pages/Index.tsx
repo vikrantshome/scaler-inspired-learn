@@ -17,22 +17,22 @@
  */
 
 // Import all section components
-import Header from "@/components/landing/Header";
-import HeroSection from "@/components/landing/HeroSection";
-import StatsSection from "@/components/landing/StatsSection";
-import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import BenefitsSection from "@/components/landing/BenefitsSection";
-import TestimonialsSection from "@/components/landing/TestimonialsSection";
-import FAQSection from "@/components/landing/FAQSection";
-import CTASection from "@/components/landing/CTASection";
-import Footer from "@/components/landing/Footer";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import StatsSection from "@/components/StatsSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 /**
  * Main page component
  * Uses min-h-screen to ensure full viewport height
  * overflow-x-hidden prevents horizontal scroll from animations
  */
-const Landing = () => {
+const Index = () => {
   return (
     <main className="min-h-screen overflow-x-hidden">
       {/* Fixed navigation - always visible at top */}
@@ -53,4 +53,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Index;
