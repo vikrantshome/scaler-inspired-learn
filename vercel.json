@@ -4,6 +4,11 @@
       "source": "/allen-career-compass",
       "destination": "https://app.naviksha.co.in/allen-career-compass",
       "permanent": true
+    },
+    {
+      "source": "/engineers-test",
+      "destination": "https://scaler-future-fit-roan.vercel.app/",
+      "permanent": true
     }
   ]
 }
