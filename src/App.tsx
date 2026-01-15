@@ -6,8 +6,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
+
+const EngineersTestRedirect = () => {
+  useEffect(() => {
+    window.location.replace("https://scaler-future-fit-roan.vercel.app/");
+  }, []);
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -17,6 +25,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/engineers-test" element={<EngineersTestRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
