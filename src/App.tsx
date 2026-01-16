@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 
 const EngineersTestRedirect = () => {
   useEffect(() => {
-    window.location.replace("https://scaler-future-fit-roan.vercel.app/");
+    window.location.replace("https://engineers-test.naviksha.co.in/");
   }, []);
   return null;
 };
