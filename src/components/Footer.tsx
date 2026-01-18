@@ -11,7 +11,7 @@
  * 4. Bottom Bar - Copyright and initiative info
  */
 
-import { Sparkles, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 // External link for CTA
 const CTA_LINK = "https://app.naviksha.co.in/auth";
@@ -27,9 +27,11 @@ const Footer = () => {
           <div>
             {/* Logo and brand name */}
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Career Compass Logo" 
+                className="w-10 h-10 rounded-xl object-contain"
+              />
               <div>
                 <h3 className="font-heading font-bold text-lg">Career Compass</h3>
                 <p className="text-xs text-primary-foreground/60">by Naviksha AI</p>

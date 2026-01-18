@@ -12,7 +12,6 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
 
 // External link for all CTAs - the main conversion destination
 const CTA_LINK = "https://app.naviksha.co.in/auth";
@@ -31,10 +30,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Brand Logo Section */}
         <div className="flex items-center gap-2">
-          {/* Logo icon - gradient background with sparkles */}
-          <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-primary-foreground" />
-          </div>
+          {/* Logo icon - using brand image */}
+          <img 
+            src="/logo.png" 
+            alt="Career Compass Logo" 
+            className="w-10 h-10 rounded-xl object-contain"
+          />
           {/* Brand text */}
           <div>
             <h1 className="font-heading font-bold text-lg text-foreground">
