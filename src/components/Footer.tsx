@@ -18,10 +18,10 @@ const CTA_LINK = "https://app.naviksha.co.in/auth";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-primary-foreground py-16">
-      <div className="container mx-auto px-4">
+    <footer className="py-16 bg-foreground text-primary-foreground">
+      <div className="container px-4 mx-auto">
         {/* Three Column Grid */}
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid gap-12 mb-12 md:grid-cols-3">
           
           {/* Column 1: Brand Information */}
           <div>
@@ -30,27 +30,27 @@ const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="Career Compass Logo" 
-                className="w-10 h-10 rounded-xl object-contain"
+                className="object-contain w-10 h-10 rounded-xl"
               />
               <div>
-                <h3 className="font-heading font-bold text-lg">Career Compass</h3>
+                <h3 className="text-lg font-bold font-heading">Career Compass</h3>
                 <p className="text-xs text-primary-foreground/60">by Naviksha AI</p>
               </div>
             </div>
             {/* Brand description */}
-            <p className="text-primary-foreground/70 text-sm max-w-xs">
+            <p className="max-w-xs text-sm text-primary-foreground/70">
               A National Career Counselling Initiative supported by leading educators and institutions.
             </p>
           </div>
 
           {/* Column 2: Quick Navigation Links */}
           <div>
-            <h4 className="font-heading font-bold mb-4">Quick Links</h4>
+            <h4 className="mb-4 font-bold font-heading">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <a 
                   href="#how-it-works" 
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  className="text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
                 >
                   How It Works
                 </a>
@@ -58,7 +58,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#benefits" 
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  className="text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
                 >
                   Benefits
                 </a>
@@ -66,7 +66,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#testimonials" 
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  className="text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
                 >
                   Testimonials
                 </a>
@@ -76,7 +76,7 @@ const Footer = () => {
                   href={CTA_LINK}
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  className="text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
                 >
                   Take the Test
                 </a>
@@ -86,38 +86,38 @@ const Footer = () => {
 
           {/* Column 3: Contact Information */}
           <div>
-            <h4 className="font-heading font-bold mb-4">Contact Us</h4>
+            <h4 className="mb-4 font-bold font-heading">Contact Us</h4>
             <div className="space-y-3">
               {/* Email link */}
               <a 
                 href="mailto:ainaviksha@gmail.com" 
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                className="flex items-center gap-3 text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
               >
                 <Mail className="w-4 h-4" />
                 ainaviksha@gmail.com
               </a>
               {/* Phone link */}
               <a 
-                href="tel:+919674255951" 
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                href="tel:+917044685101" 
+                className="flex items-center gap-3 text-sm transition-colors text-primary-foreground/70 hover:text-primary-foreground"
               >
                 <Phone className="w-4 h-4" />
-                +91-9674255951
+                +91-7044685101
               </a>
             </div>
             {/* Founder info */}
-            <p className="mt-4 text-primary-foreground/50 text-xs">
-              Vikrant Shome, Founder, Naviksha AI
+            <p className="mt-4 text-xs text-primary-foreground/50">
+              {/* Vikrant Shome, Founder, Naviksha AI */}
             </p>
           </div>
         </div>
 
         {/* Bottom Bar - Copyright and Initiative */}
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm">
+        <div className="flex flex-col items-center justify-between gap-4 pt-8 border-t border-primary-foreground/10 md:flex-row">
+          <p className="text-sm text-primary-foreground/50">
             © 2024 Naviksha AI. All rights reserved.
           </p>
-          <p className="text-primary-foreground/50 text-xs">
+          <p className="text-xs text-primary-foreground/50">
             Part of The National Career Counselling Initiative (NCCi)
           </p>
         </div>
