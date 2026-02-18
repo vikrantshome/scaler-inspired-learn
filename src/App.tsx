@@ -17,6 +17,13 @@ const EngineersTestRedirect = () => {
   return null;
 };
 
+const ApplichoiceRedirect = () => {
+  useEffect(() => {
+    window.location.replace("https://applichoice.naviksha.co.in/");
+  }, []);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -26,6 +33,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/engineers-test" element={<EngineersTestRedirect />} />
+          <Route path="/applichoice" element={<ApplichoiceRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -9,6 +9,11 @@
       "source": "/engineers-test",
       "destination": "https://engineers-test.naviksha.co.in/",
       "permanent": true
+    },
+    {
+      "source": "/applichoice",
+      "destination": "https://applichoice.naviksha.co.in/",
+      "permanent": true
     }
   ]
 }
