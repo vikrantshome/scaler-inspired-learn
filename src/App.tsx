@@ -24,6 +24,13 @@ const ApplichoiceRedirect = () => {
   return null;
 };
 
+const AllenCareerCompassRedirect = () => {
+  useEffect(() => {
+    window.location.replace("https://acadspace-pathfinder-allen.vercel.app/");
+  }, []);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -34,6 +41,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/engineers-test" element={<EngineersTestRedirect />} />
           <Route path="/applichoice" element={<ApplichoiceRedirect />} />
+          <Route path="/allen-career-compass" element={<AllenCareerCompassRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
