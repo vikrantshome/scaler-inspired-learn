@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import AllenCareerCompass from "./pages/AllenCareerCompass";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
@@ -24,13 +25,6 @@ const ApplichoiceRedirect = () => {
   return null;
 };
 
-const AllenCareerCompassRedirect = () => {
-  useEffect(() => {
-    window.location.replace("https://acadspace-pathfinder-allen.vercel.app/");
-  }, []);
-  return null;
-};
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -41,7 +35,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/engineers-test" element={<EngineersTestRedirect />} />
           <Route path="/applichoice" element={<ApplichoiceRedirect />} />
-          <Route path="/allen-career-compass" element={<AllenCareerCompassRedirect />} />
+          <Route path="/allen-career-compass" element={<AllenCareerCompass />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

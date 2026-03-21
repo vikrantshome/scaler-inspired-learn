@@ -1,9 +1,8 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/allen-career-compass",
-      "destination": "https://app.naviksha.co.in/allen-career-compass",
-      "permanent": true
+      "destination": "/"
     },
     {
       "source": "/engineers-test",
