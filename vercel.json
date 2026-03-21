@@ -3,7 +3,9 @@
     {
       "source": "/allen-career-compass",
       "destination": "/"
-    },
+    }
+  ],
+  "redirects": [
     {
       "source": "/engineers-test",
       "destination": "https://engineers-test.naviksha.co.in/",

@@ -27,6 +27,7 @@ This keeps the public entry experience in the landing repo while still sending u
 3. **Vercel Routing Fix**
    - Updated `vercel.json`
    - Replaced the `/allen-career-compass` redirect with a rewrite so the React router can serve the page
+   - Kept `/engineers-test` and `/applichoice` as standard redirects under the `redirects` section to match Vercel schema requirements
 
 4. **Allen App CTA Target**
    - The Allen landing page CTA links point to the dedicated Allen application instance:
