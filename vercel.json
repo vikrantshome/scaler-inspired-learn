@@ -3,6 +3,10 @@
     {
       "source": "/allen-career-compass",
       "destination": "/"
+    },
+    {
+      "source": "/creator-labs",
+      "destination": "/"
     }
   ],
   "redirects": [

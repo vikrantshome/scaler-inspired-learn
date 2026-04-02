@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import AllenCareerCompass from "./pages/AllenCareerCompass";
+import CreatorLabs from "./pages/CreatorLabs";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/engineers-test" element={<EngineersTestRedirect />} />
           <Route path="/applichoice" element={<ApplichoiceRedirect />} />
           <Route path="/allen-career-compass" element={<AllenCareerCompass />} />
+          <Route path="/creator-labs" element={<CreatorLabs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
