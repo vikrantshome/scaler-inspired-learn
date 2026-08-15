@@ -69,19 +69,22 @@ const CTASection = () => {
                   variant="hero" 
                   size="xl" 
                   // Override colors for contrast on gradient background
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" 
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 w-full sm:w-auto text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-10" 
                   asChild
                 >
+
                   <a 
                     href={CTA_LINK} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="group"
                   >
-                    Start Now • Get Report
+                    Start Test at just ₹99
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
+
+
               </div>
 
               {/* Tagline */}

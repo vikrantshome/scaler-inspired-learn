@@ -27,21 +27,21 @@ const Header = () => {
       // Semi-transparent card color with backdrop blur for glass effect
       className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border/50"
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-3 sm:px-4 py-2.5 sm:py-4 flex items-center justify-between gap-2">
         {/* Brand Logo Section */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 min-w-0">
           {/* Logo icon - using brand image */}
           <img 
             src="/logo.png" 
             alt="Career Compass Logo" 
-            className="w-10 h-10 rounded-xl object-contain"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl object-contain shrink-0"
           />
           {/* Brand text */}
-          <div>
-            <h1 className="font-heading font-bold text-lg text-foreground">
+          <div className="min-w-0">
+            <h1 className="font-heading font-bold text-sm sm:text-lg text-foreground truncate leading-tight">
               Career Compass
             </h1>
-            <p className="text-xs text-muted-foreground">by Naviksha AI</p>
+            <p className="text-[10px] sm:text-xs text-muted-foreground truncate leading-tight">by Naviksha AI</p>
           </div>
         </div>
 
@@ -69,12 +69,19 @@ const Header = () => {
         </nav>
 
         {/* Primary CTA Button - links to auth page */}
-        <Button variant="hero" size="lg" asChild>
+        <Button 
+          variant="hero" 
+          size="default" 
+          asChild 
+          className="h-8.5 sm:h-12 px-3 sm:px-7 text-xs sm:text-base font-semibold shrink-0 rounded-lg sm:rounded-xl"
+        >
           <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
-            Start Now
+            <span className="hidden sm:inline">Start Test at just ₹99</span>
+            <span className="sm:hidden">Start • ₹99</span>
           </a>
         </Button>
       </div>
+
     </motion.header>
   );
 };

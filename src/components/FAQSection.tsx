@@ -45,10 +45,12 @@ const FAQS = [
     answer: "Your results include: a detailed analysis of your core strengths and interest clusters, your top 3 matched careers with fit scores, preparation cues and roadmap for each career path, and actionable insights to guide your academic decisions.",
   },
   {
-    question: "Is the Career Compass Test free?",
-    answer: "Yes, the Career Compass Test is completely free to take. No payment is required to complete the assessment and receive your personalized Career Compass Report.",
+    question: "What is the fee for the Career Compass Test?",
+    answer: "The Career Compass assessment is available at a nominal fee of just ₹99. This one-time fee gives you full access to the AI-powered personality and career assessment, along with an instant, downloadable personalized Career Roadmap Report.",
   },
 ];
+
+
 
 const FAQSection = () => {
   const ref = useRef(null);
