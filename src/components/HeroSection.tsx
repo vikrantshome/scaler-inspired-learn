@@ -101,13 +101,14 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button variant="hero" size="xl" asChild className="group">
+            <Button variant="hero" size="xl" asChild className="group w-full sm:w-auto text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-10">
               <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
-                Start Test
+                Start Test at just ₹99
                 {/* Arrow animates on hover */}
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
+
           </motion.div>
 
           {/* Trust Indicator - Reduces friction */}
@@ -118,8 +119,10 @@ const HeroSection = () => {
             className="mt-6 text-sm text-muted-foreground flex items-center justify-center gap-2"
           >
             <CheckCircle2 className="w-4 h-4 text-primary" />
-            No payment required • Works on any device
+            One-time fee of just ₹99 • Instant AI report • Works on any device
           </motion.p>
+
+
         </div>
       </div>
     </section>
